@@ -35,12 +35,12 @@ for i in range(1, 173):
 # Range i'yi kaynak koddaki maximum sayım kadar kullanınız.
 # döngüde benim sonucumda 172 tane sonuc olduğu için max range 173 kullanıldı.
 
+#Her tez özeti için özel url vardır.
 # örnek link
 # https://tez.yok.gov.tr/UlusalTezMerkezi/tezDetay.jsp?id="TBzuU3MqYhqJ9XHc-esfgA"&no="TBzuU3MqYhqJ9XHc-esfgA"
 
-    url = 'https://tez.yok.gov.tr/UlusalTezMerkezi/tezDetay.jsp?id="' + \
-        link_id+'"&no="'+link_no
-# Verileriçekm işlemini otomatize ettikten sonra bu aşamada oluşturduğumuz url'ler alma işlemi kalıyor.
+    url = 'https://tez.yok.gov.tr/UlusalTezMerkezi/tezDetay.jsp?id="' +link_id+'"&no="'+link_no
+# URL işlemini otomatize ettikten sonra bu aşamada oluşturduğumuz url'lerden html kodlarını alma işlemi kalıyor.
 
     R = requests.get(url)
     doc = BeautifulSoup(R.text, "html.parser")
